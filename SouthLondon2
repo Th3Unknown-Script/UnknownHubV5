@@ -3,7 +3,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries
 local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/aaaa"))()
 
 -- Create Main UI Window
-local UI = GUI:CreateWindow("UnknownHub | SL2 Script | Made by Unknown | [V3.4]", "Assalamu alaykum")
+local UI = GUI:CreateWindow("UnknownHub | SL2 Script | Made by Unknown | [V5]", "Assalamu alaykum")
 
 -- **Main Page**
 local Home = UI:addPage("⚙️ Main", 1, true, 6)
@@ -29,10 +29,6 @@ end)
 Home:addButton("📷 Remove Camera Shake", function()
     local g_ = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Camera_Bob")
     if g_ then g_:Destroy() end
-end)
-
-Home:addButton("🎁 Auto Gifts", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/5wQNYkTB"))()
 end)
 
 Home:addButton("💳 Auto BlankCard",function()
@@ -128,13 +124,13 @@ local function updateESPText(visible)
 end
 
 -- Show Pot Toggle
-LP:addToggle("👾 Show autofarm spot", function(value)
+LP:addToggle("🏠 Show autofarm spot", function(value)
     showPotToggle = value
     updateESPText(value)
 end)
 
 -- Auto Sugar Farm Toggle
-LP:addToggle("🌿 Auto Sugar Farm", function(value)
+LP:addToggle("🌾 Auto Sugar Farm", function(value)
     sugarFarmRunning = value
     spawn(function()
         while sugarFarmRunning do
@@ -184,7 +180,7 @@ LP:addToggle("🌿 Auto Sugar Farm", function(value)
 end)
 
 -- Anti-AFK Toggle
-LP:addToggle("🛑 Anti-AFK", function(value)
+LP:addToggle("🔵 Anti-AFK", function(value)
     antiAFKEnabled = value
     if antiAFKEnabled then
         spawn(antiAFK)
@@ -240,10 +236,6 @@ combatPage:addButton("👀 Highlight ESP (PvP Checker)", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/QcEsWdLY"))()
 end)
 
-combatPage:addButton("📍 Track Lines (PvP Checker)", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/CHpQhRcv"))()
-end)
-
 -- **Animations Page**
 local Animations = UI:addPage("🏃 Animations", 2, false, 6)
 Animations:addLabel("🏃 Animations", "All Animation Features")
@@ -275,7 +267,6 @@ local function toggleAnimation(state, animationName)
     end
 end
 
-Animations:addToggle("🐍 Snake Crawl", function(state) toggleAnimation(state, "snake crawl") end)
 Animations:addToggle("🔒 Handcuff Animation", function(state) toggleAnimation(state, "cuffed") end)
 Animations:addToggle("🛑 Crouch Animation", function(state) toggleAnimation(state, "crouch") end)
 
@@ -283,7 +274,7 @@ Animations:addToggle("🛑 Crouch Animation", function(state) toggleAnimation(st
 local Character = UI:addPage("🧍 Character", 2, false, 6)
 Character:addLabel("🧍 Character Features", "All Character Mods")
 
-Character:addButton("🍬 Auto Skittles", function()
+Character:addButton("🍬 infinite Skittles", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/eB7W81Ey"))()
 end)
 
@@ -307,20 +298,6 @@ end)
 
 Character:addButton("💎 HunnidChain", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/PQCY6Wd1"))()
-end)
-
-Character:addLabel("👟 Shoes & Add-ons", "Buy Available Shoes")
-
-Character:addButton("🎄 Xmas Shoes [$200]", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/nZip8SyM"))()
-end)
-
-Character:addButton("🥇 Gold Xmas Shoes [$200]", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/Hu4e1mkB"))()
-end)
-
-Character:addButton("🔴 Redmas Shoes [$200]", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/AaaQCUij"))()
 end)
 
 -- **Cars Page (Coming Soon)**
