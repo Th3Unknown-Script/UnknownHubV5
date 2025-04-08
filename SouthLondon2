@@ -3,7 +3,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries
 local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/aaaa"))()
 
 -- Create Main UI Window
-local UI = GUI:CreateWindow("UnknownHub | SL2 Script | Made by Unknown | [V5]", "Assalamu alaykum")
+local UI = GUI:CreateWindow("UnknownHub | SL2 Script | Made by Unknown | [V5.01]", "Assalamu alaykum")
 
 -- **Main Page**
 local Home = UI:addPage("⚙️ Main", 1, true, 6)
@@ -124,13 +124,13 @@ local function updateESPText(visible)
 end
 
 -- Show Pot Toggle
-LP:addToggle("🏠 Show autofarm spot", function(value)
+LP:addToggle("👾 Show autofarm spot", function(value)
     showPotToggle = value
     updateESPText(value)
 end)
 
 -- Auto Sugar Farm Toggle
-LP:addToggle("🌾 Auto Sugar Farm", function(value)
+LP:addToggle("🌿 Auto Sugar Farm", function(value)
     sugarFarmRunning = value
     spawn(function()
         while sugarFarmRunning do
@@ -180,7 +180,7 @@ LP:addToggle("🌾 Auto Sugar Farm", function(value)
 end)
 
 -- Anti-AFK Toggle
-LP:addToggle("🔵 Anti-AFK", function(value)
+LP:addToggle("🛑 Anti-AFK", function(value)
     antiAFKEnabled = value
     if antiAFKEnabled then
         spawn(antiAFK)
@@ -274,7 +274,7 @@ Animations:addToggle("🛑 Crouch Animation", function(state) toggleAnimation(st
 local Character = UI:addPage("🧍 Character", 2, false, 6)
 Character:addLabel("🧍 Character Features", "All Character Mods")
 
-Character:addButton("🍬 infinite Skittles", function()
+Character:addButton("🍬 Infinite Skittles Boost", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/eB7W81Ey"))()
 end)
 
@@ -292,21 +292,33 @@ end)
 
 Character:addLabel("👕 Customization", "Clothing & Accessories")
 
-Character:addButton("🔗 CrossChain", function()
+Character:addButton("🔗 CrossChain [Visual]", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/EuTmKu63"))()
 end)
 
-Character:addButton("💎 HunnidChain", function()
+Character:addButton("💎 HunnidChain [Visual]", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/PQCY6Wd1"))()
 end)
+--[[
+Character:addLabel("👟 Shoes & Add-ons", "Buy Available Shoes")
 
+Character:addButton("🎄 Xmas Shoes [$200]", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/nZip8SyM"))()
+end)
+
+Character:addButton("🥇 Gold Xmas Shoes [$200]", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Hu4e1mkB"))()
+end)
+
+Character:addButton("🔴 Redmas Shoes [$200]", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/AaaQCUij"))()
+end)
+--]]
 -- **Cars Page (Coming Soon)**
 local Cars = UI:addPage("🚗 Cars (NEW)", 2, false, 6)
 Cars:addLabel("🚗 Cars Features", "❗️CAR MUST BE SPAWNED❗️")
 
 Cars:addButton("🏎️ Turbo Activator", function()
-
-print("💎made by cor_s |discord user|💎")
 
 local plr = game.Players.LocalPlayer.Name
 local carname = (plr .. "'s Car") 
